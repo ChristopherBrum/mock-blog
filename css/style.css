@@ -64,6 +64,11 @@ nav a:focus {
 
   /* Layout */
 
+header {
+  background: #f8f8f8;
+  padding: 2.5em;
+}
+
 .container {
   width: 90%;
   max-width: 900px;
@@ -75,9 +80,24 @@ nav a:focus {
   justify-content: space-around;
 }
 
-header {
-  background: #f8f8f8;
-  padding: 2.5em;
+.main-col { 
+  width: 75%;
+}
+
+.side-col {
+  width: 25%;
+}
+
+.main-img {
+  width: 100%;
+}
+
+.img-alt {
+  width: 200px;
+}
+
+.side-img {
+  width: 150px;
 }
 
   /* Media Queries */
@@ -91,7 +111,9 @@ header {
   nav li {
     margin: .75em;
   }
+}
 
+@media (max-width: 575px) {
   nav ul {
     flex-direction: column;
     justify-content: center;
