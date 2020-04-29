@@ -1,18 +1,40 @@
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+
 }
 
   /* Typography */
 
-h1 {
+h1, 
+h2,
+h3 {
   font-family: 'Lora', serif;
-  font-size: 2rem;
   font-weight: 400;
   color: #143774;
+}
+
+h1 {
+  font-size: 2rem;
   margin: 0;
 }
 
+p {
+  color: #707070;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* Header Subtitle */
 .subtitle {
   color: #1792d2;
   font-size: .75rem;
@@ -22,6 +44,44 @@ h1 {
   margin: 0;
 }
 
+.article-title {
+  font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+  font-size: .875rem;
+}
+
+.article-read-more {
+  text-decoration: none;
+  font-weight: 700;
+  color: #1792d2;
+  text-transform: uppercase;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+  color: #1792d2;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.article-info {
+  margin: 2em 0;
+}
+
+.inline-link {
+  color: #1792d2;
+}
+
+.footer-text {
+  color: #FFFFFF;
+  text-align: center;
+  margin: 5px 0;
+  opacity: .54;
+}
+
   /* Navigation  */
 
 nav ul {
@@ -29,8 +89,6 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-
-  /* border: 1px solid red; */
 }
 
 nav li {
@@ -67,7 +125,8 @@ nav a:focus {
 header {
   background: #f8f8f8;
   padding: 2.5em;
-}
+  text-align: center;
+} 
 
 .container {
   width: 90%;
@@ -75,48 +134,37 @@ header {
   margin: 0 auto;
 }
 
-.container-nav {
+.container-flex {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 }
 
-.main-col { 
-  width: 75%;
-}
-
-.side-col {
-  width: 25%;
-}
-
-.main-img {
-  width: 100%;
-}
-
-.img-alt {
-  width: 200px;
-}
-
-.side-img {
-  width: 150px;
+footer {
+  background: #143774;
+  padding: 30px;
 }
 
   /* Media Queries */
 
-@media (max-width: 915px) {
-  .container-nav {
-    flex-direction: column;
-    align-items: center;
+@media (min-width: 675px) {
+  .container-flex {
+    flex-direction: row;
   }
 
-  nav li {
-    margin: .75em;
+  main {
+    width: 75%;
+  }
+
+  .sidebar {
+    width: 20%;
   }
 }
 
-@media (max-width: 575px) {
-  nav ul {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  /* Articles */
+
+.article-featured {
+  border-bottom: #707070 1px solid;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
 }
