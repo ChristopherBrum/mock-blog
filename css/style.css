@@ -109,12 +109,11 @@ strong {
 nav ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
-.nav-item + .nav-item {
-  margin: 0 0 0 2em;
+.nav-item {
+  margin-top: 1em;
 }
 
 nav a {
@@ -140,6 +139,17 @@ nav a:focus {
 .current-page:hover {
   color: #707070;
   text-decoration: none;
+}
+
+@media (min-width: 550px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-item + .nav-item {
+    margin-left: 1.5em;
+  }
 }
 
   /* Layout */
@@ -171,7 +181,7 @@ footer {
 
   /* Media Queries */
 
-@media (min-width: 675px) {
+@media (min-width: 875px) {
   .container-flex {
     flex-direction: row;
   }
